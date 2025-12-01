@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_where_we_operate_where_we_operates",
+  "info": {
+    "displayName": "whereWeOperate",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "countries": {
+      "type": "component",
+      "component": "feature.feature",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

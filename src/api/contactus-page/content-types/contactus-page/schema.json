@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "contactus_pages",
+  "info": {
+    "singularName": "contactus-page",
+    "pluralName": "contactus-pages",
+    "displayName": "contactus-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "banner.banner",
+      "repeatable": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "contactUsCards": {
+      "type": "component",
+      "component": "business-info-card.business-info-card",
+      "repeatable": true,
+      "min": 4,
+      "max": 4
+    },
+    "divider": {
+      "type": "component",
+      "component": "divider.divider",
+      "repeatable": false
+    }
+  }
+}

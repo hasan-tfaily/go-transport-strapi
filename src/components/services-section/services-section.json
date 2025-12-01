@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_services_section_services_sections",
+  "info": {
+    "displayName": "servicesSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    }
+  },
+  "config": {}
+}

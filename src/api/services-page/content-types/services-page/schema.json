@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "services_pages",
+  "info": {
+    "singularName": "services-page",
+    "pluralName": "services-pages",
+    "displayName": "services-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "banner.banner",
+      "repeatable": false
+    },
+    "divider": {
+      "type": "component",
+      "component": "divider.divider",
+      "repeatable": false
+    }
+  }
+}

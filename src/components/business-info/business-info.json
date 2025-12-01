@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_business_info_business_infos",
+  "info": {
+    "displayName": "businessInfo",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "bigImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "smallImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "missionCard": {
+      "type": "component",
+      "component": "business-info-card.business-info-card",
+      "repeatable": false
+    },
+    "vissionCard": {
+      "type": "component",
+      "component": "business-info-card.business-info-card",
+      "repeatable": false
+    },
+    "phoneNumber": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_hero_section_hero_sections",
+  "info": {
+    "displayName": "heroSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

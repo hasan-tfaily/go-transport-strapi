@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_about_section_about_sections",
+  "info": {
+    "displayName": "aboutSection",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "bigImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "smallImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "feature": {
+      "type": "component",
+      "component": "feature.feature",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

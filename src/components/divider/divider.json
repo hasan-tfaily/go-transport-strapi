@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_divider_dividers",
+  "info": {
+    "displayName": "divider",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

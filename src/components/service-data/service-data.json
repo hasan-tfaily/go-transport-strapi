@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_service_data_service_data",
+  "info": {
+    "displayName": "serviceData"
+  },
+  "options": {},
+  "attributes": {
+    "descritpion": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

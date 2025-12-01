@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "aboutus_pages",
+  "info": {
+    "singularName": "aboutus-page",
+    "pluralName": "aboutus-pages",
+    "displayName": "aboutus-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "component": "banner.banner",
+      "repeatable": false
+    },
+    "businessInfo": {
+      "type": "component",
+      "component": "business-info.business-info",
+      "repeatable": false
+    },
+    "whereWeOperate": {
+      "type": "component",
+      "component": "where-we-operate.where-we-operate",
+      "repeatable": false
+    },
+    "divider": {
+      "type": "component",
+      "component": "divider.divider",
+      "repeatable": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_service_card_service_cards",
+  "info": {
+    "displayName": "serviceCard",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
