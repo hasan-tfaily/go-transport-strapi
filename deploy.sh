@@ -87,13 +87,29 @@ fi
 # Validate critical environment variables
 echo "Validating critical environment variables..."
 source .env 2>/dev/null || true
+DEFAULT_SECRETS_WARNING=false
 
 if [ -z "$APP_KEYS" ] || [ "$APP_KEYS" = "toBeModified1,toBeModified2,toBeModified3,toBeModified4" ]; then
     echo -e "${YELLOW}⚠ Warning: APP_KEYS appears to be using default values. Please update them in .env${NC}"
+    DEFAULT_SECRETS_WARNING=true
 fi
 
 if [ -z "$ADMIN_JWT_SECRET" ] || [ "$ADMIN_JWT_SECRET" = "toBeModified" ]; then
     echo -e "${YELLOW}⚠ Warning: ADMIN_JWT_SECRET appears to be using default values. Please update them in .env${NC}"
+    DEFAULT_SECRETS_WARNING=true
+fi
+
+if [ -z "$API_TOKEN_SALT" ] || [ "$API_TOKEN_SALT" = "toBeModified" ] || \
+   [ -z "$TRANSFER_TOKEN_SALT" ] || [ "$TRANSFER_TOKEN_SALT" = "toBeModified" ] || \
+   [ -z "$ENCRYPTION_KEY" ] || [ "$ENCRYPTION_KEY" = "toBeModified" ]; then
+    echo -e "${YELLOW}⚠ Warning: One or more Strapi salts/keys are using default values. Please update them in .env${NC}"
+    DEFAULT_SECRETS_WARNING=true
+fi
+
+if [ "$DEFAULT_SECRETS_WARNING" = true ]; then
+    echo -e "${YELLOW}⚠ Security reminder: Rotate all default Strapi secrets (APP_KEYS, ADMIN_JWT_SECRET, API_TOKEN_SALT, TRANSFER_TOKEN_SALT, ENCRYPTION_KEY) before exposing this server to the internet.${NC}"
+else
+    echo -e "${GREEN}✓ Critical security secrets are customized${NC}"
 fi
 
 echo ""
@@ -102,12 +118,26 @@ echo ""
 echo -e "${BLUE}Step 3: Installing npm dependencies...${NC}"
 if [ -f package-lock.json ]; then
     echo "Using package-lock.json for consistent installs..."
-    npm ci
+    if npm ci; then
+        echo -e "${GREEN}✓ npm ci completed successfully${NC}"
+    else
+        echo -e "${YELLOW}⚠ npm ci failed (likely due to lockfile drift). Falling back to npm install...${NC}"
+        if npm install; then
+            echo -e "${GREEN}✓ Dependencies installed via npm install${NC}"
+        else
+            echo -e "${RED}✗ npm install failed. Please inspect the errors above.${NC}"
+            exit 1
+        fi
+    fi
 else
-    echo "Installing dependencies..."
-    npm install
+    echo "package-lock.json not found. Running npm install..."
+    if npm install; then
+        echo -e "${GREEN}✓ Dependencies installed${NC}"
+    else
+        echo -e "${RED}✗ npm install failed. Please inspect the errors above.${NC}"
+        exit 1
+    fi
 fi
-echo -e "${GREEN}✓ Dependencies installed${NC}"
 echo ""
 
 # Step 4: Create logs directory
