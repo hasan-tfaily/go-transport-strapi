@@ -1,0 +1,987 @@
+{
+  "info": {
+    "_postman_id": "2faed9ce-ca2a-4b56-b3d7-2b7741f5cd7c",
+    "name": "Strapi Content API",
+    "description": "Automatically generated Postman collection based on local Strapi schemas.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Collection Types",
+      "item": [
+        {
+          "name": "Article",
+          "item": [
+            {
+              "name": "List Article",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/articles",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "articles"
+                  ]
+                },
+                "description": "Retrieve a paginated list of Article."
+              }
+            },
+            {
+              "name": "Get Article by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/articles/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "articles",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Retrieve a single Article entry by ID."
+              }
+            },
+            {
+              "name": "Create Article",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/articles",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "articles"
+                  ]
+                },
+                "description": "Create a new Article entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"title\": \"Title value\",\n    \"description\": \"Description value\",\n    \"slug\": \"title-sample-slug\",\n    \"cover\": 1,\n    \"author\": 1,\n    \"category\": 1,\n    \"blocks\": [\n      {\n        \"__component\": \"shared.media\",\n        \"file\": 1\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update Article",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/articles/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "articles",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Update an existing Article entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"title\": \"Title value\",\n    \"description\": \"Description value\",\n    \"slug\": \"title-sample-slug\",\n    \"cover\": 1,\n    \"author\": 1,\n    \"category\": 1,\n    \"blocks\": [\n      {\n        \"__component\": \"shared.media\",\n        \"file\": 1\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Article",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/articles/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "articles",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Delete an existing Article entry."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Author",
+          "item": [
+            {
+              "name": "List Author",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/authors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "authors"
+                  ]
+                },
+                "description": "Retrieve a paginated list of Author."
+              }
+            },
+            {
+              "name": "Get Author by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/authors/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "authors",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Retrieve a single Author entry by ID."
+              }
+            },
+            {
+              "name": "Create Author",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/authors",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "authors"
+                  ]
+                },
+                "description": "Create a new Author entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"avatar\": 1,\n    \"email\": \"Email value\",\n    \"articles\": [\n      1\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update Author",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/authors/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "authors",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Update an existing Author entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"avatar\": 1,\n    \"email\": \"Email value\",\n    \"articles\": [\n      1\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Author",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/authors/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "authors",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Delete an existing Author entry."
+              }
+            }
+          ]
+        },
+        {
+          "name": "Category",
+          "item": [
+            {
+              "name": "List Category",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                },
+                "description": "Retrieve a paginated list of Category."
+              }
+            },
+            {
+              "name": "Get Category by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Retrieve a single Category entry by ID."
+              }
+            },
+            {
+              "name": "Create Category",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                },
+                "description": "Create a new Category entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"slug\": \"sample-slug\",\n    \"articles\": [\n      1\n    ],\n    \"description\": \"Description value\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update Category",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Update an existing Category entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"slug\": \"sample-slug\",\n    \"articles\": [\n      1\n    ],\n    \"description\": \"Description value\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete Category",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/categories/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Delete an existing Category entry."
+              }
+            }
+          ]
+        },
+        {
+          "name": "lead",
+          "item": [
+            {
+              "name": "List lead",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/leads",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "leads"
+                  ]
+                },
+                "description": "Retrieve a paginated list of lead."
+              }
+            },
+            {
+              "name": "Get lead by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/leads/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "leads",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Retrieve a single lead entry by ID."
+              }
+            },
+            {
+              "name": "Create lead",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/leads",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "leads"
+                  ]
+                },
+                "description": "Create a new lead entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"phone\": \"Phone value\",\n    \"message\": \"Message value\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update lead",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/leads/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "leads",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Update an existing lead entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"name\": \"Name value\",\n    \"phone\": \"Phone value\",\n    \"message\": \"Message value\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete lead",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/leads/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "leads",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Delete an existing lead entry."
+              }
+            }
+          ]
+        },
+        {
+          "name": "service",
+          "item": [
+            {
+              "name": "List service",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services"
+                  ]
+                },
+                "description": "Retrieve a paginated list of service."
+              }
+            },
+            {
+              "name": "Get service by ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Retrieve a single service entry by ID."
+              }
+            },
+            {
+              "name": "Create service",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services"
+                  ]
+                },
+                "description": "Create a new service entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"title\": \"Title value\",\n    \"icon\": 1,\n    \"serviceData\": {\n      \"descritpion\": \"Descritpion value\",\n      \"image\": 1,\n      \"icon\": 1\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Update service",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Update an existing service entry.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"title\": \"Title value\",\n    \"icon\": 1,\n    \"serviceData\": {\n      \"descritpion\": \"Descritpion value\",\n      \"image\": 1,\n      \"icon\": 1\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "name": "Delete service",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services/{{id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services",
+                    "{{id}}"
+                  ]
+                },
+                "description": "Delete an existing service entry."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Single Types",
+      "item": [
+        {
+          "name": "About",
+          "item": [
+            {
+              "name": "Get About",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/about",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "about"
+                  ]
+                },
+                "description": "Retrieve the About single type."
+              }
+            },
+            {
+              "name": "Update About",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/about",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "about"
+                  ]
+                },
+                "description": "Update the About single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"title\": \"Title value\",\n    \"blocks\": [\n      {\n        \"__component\": \"shared.media\",\n        \"file\": 1\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "aboutus-page",
+          "item": [
+            {
+              "name": "Get aboutus-page",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/aboutus-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "aboutus-page"
+                  ]
+                },
+                "description": "Retrieve the aboutus-page single type."
+              }
+            },
+            {
+              "name": "Update aboutus-page",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/aboutus-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "aboutus-page"
+                  ]
+                },
+                "description": "Update the aboutus-page single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"banner\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"image\": 1\n    },\n    \"businessInfo\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"description\": \"Description value\",\n      \"bigImage\": 1,\n      \"smallImage\": 1,\n      \"missionCard\": {\n        \"title\": \"Title value\",\n        \"description\": \"Description value\",\n        \"icon\": 1\n      },\n      \"vissionCard\": {\n        \"title\": \"Title value\",\n        \"description\": \"Description value\",\n        \"icon\": 1\n      },\n      \"phoneNumber\": \"PhoneNumber value\"\n    },\n    \"whereWeOperate\": {\n      \"title\": \"Title value\",\n      \"description\": \"Description value\",\n      \"image\": 1,\n      \"countries\": [\n        {\n          \"feature\": \"Feature value\"\n        }\n      ]\n    },\n    \"divider\": {\n      \"title\": \"Title value\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "contactus-page",
+          "item": [
+            {
+              "name": "Get contactus-page",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/contactus-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "contactus-page"
+                  ]
+                },
+                "description": "Retrieve the contactus-page single type."
+              }
+            },
+            {
+              "name": "Update contactus-page",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/contactus-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "contactus-page"
+                  ]
+                },
+                "description": "Update the contactus-page single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"banner\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"image\": 1\n    },\n    \"title\": \"Title value\",\n    \"subtitle\": \"Subtitle value\",\n    \"description\": \"Description value\",\n    \"contactUsCards\": [\n      {\n        \"title\": \"Title value\",\n        \"description\": \"Description value\",\n        \"icon\": 1\n      }\n    ],\n    \"divider\": {\n      \"title\": \"Title value\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Global",
+          "item": [
+            {
+              "name": "Get Global",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/global",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "global"
+                  ]
+                },
+                "description": "Retrieve the Global single type."
+              }
+            },
+            {
+              "name": "Update Global",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/global",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "global"
+                  ]
+                },
+                "description": "Update the Global single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"siteName\": \"SiteName value\",\n    \"favicon\": 1,\n    \"siteDescription\": \"SiteDescription value\",\n    \"defaultSeo\": {\n      \"metaTitle\": \"MetaTitle value\",\n      \"metaDescription\": \"MetaDescription value\",\n      \"shareImage\": 1\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "homepage",
+          "item": [
+            {
+              "name": "Get homepage",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/homepage",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "homepage"
+                  ]
+                },
+                "description": "Retrieve the homepage single type."
+              }
+            },
+            {
+              "name": "Update homepage",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/homepage",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "homepage"
+                  ]
+                },
+                "description": "Update the homepage single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"heroSection\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"description\": \"Description value\"\n    },\n    \"aboutSection\": {\n      \"bigImage\": 1,\n      \"smallImage\": 1,\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"description\": \"Description value\",\n      \"feature\": [\n        {\n          \"feature\": \"Feature value\"\n        }\n      ]\n    },\n    \"servicesSection\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"services\": [\n        1\n      ]\n    },\n    \"divider\": {\n      \"title\": \"Title value\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "services-page",
+          "item": [
+            {
+              "name": "Get services-page",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services-page"
+                  ]
+                },
+                "description": "Retrieve the services-page single type."
+              }
+            },
+            {
+              "name": "Update services-page",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/api/services-page",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services-page"
+                  ]
+                },
+                "description": "Update the services-page single type.",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"banner\": {\n      \"title\": \"Title value\",\n      \"subtitle\": \"Subtitle value\",\n      \"image\": 1\n    },\n    \"divider\": {\n      \"title\": \"Title value\"\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:1337",
+      "type": "string"
+    }
+  ]
+}

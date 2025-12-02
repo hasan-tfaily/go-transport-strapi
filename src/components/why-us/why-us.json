@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_why_us_whyuses",
+  "info": {
+    "displayName": "whyUs",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "feature.feature",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

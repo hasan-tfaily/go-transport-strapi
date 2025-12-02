@@ -216,6 +216,19 @@ export interface WhereWeOperateWhereWeOperate extends Struct.ComponentSchema {
   };
 }
 
+export interface WhyUsWhyUs extends Struct.ComponentSchema {
+  collectionName: 'components_why_us_whyuses';
+  info: {
+    displayName: 'whyUs';
+    icon: 'bulletList';
+  };
+  attributes: {
+    features: Schema.Attribute.Component<'feature.feature', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -235,6 +248,7 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'where-we-operate.where-we-operate': WhereWeOperateWhereWeOperate;
+      'why-us.why-us': WhyUsWhyUs;
     }
   }
 }

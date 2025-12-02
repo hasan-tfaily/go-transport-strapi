@@ -30,6 +30,11 @@
       "type": "component",
       "component": "divider.divider",
       "repeatable": false
+    },
+    "whyUs": {
+      "type": "component",
+      "component": "why-us.why-us",
+      "repeatable": false
     }
   }
 }
