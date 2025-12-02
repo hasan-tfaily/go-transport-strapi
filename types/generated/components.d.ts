@@ -223,7 +223,11 @@ export interface WhyUsWhyUs extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
+    bigImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     features: Schema.Attribute.Component<'feature.feature', true>;
+    smallImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
